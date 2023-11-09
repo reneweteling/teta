@@ -1,0 +1,24 @@
+- cache(usp_layout) do
+  = element_view_for(usp_layout) do |el|
+    .carousel.slide.border.__usp_layout
+      .container
+        h2 USP
+        h2 = el.render(:title)
+        p = el.render(:subtitle)
+
+        .carousel-indicators
+          button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"
+          button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"
+          button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 3"
+
+      .carousel-inner
+        = render usp_layout.nested_elements.published
+
+      button.carousel-control-prev type="button" data-bs-target="#myCarousel" data-bs-slide="prev"
+        span.carousel-control-prev-icon aria-hidden="true"
+        span.visually-hiddenPrevious
+      button.carousel-control-next type="button" data-bs-target="#myCarousel" data-bs-slide="next"
+        span.carousel-control-next-icon aria-hidden="true"
+        span.visually-hiddenNext
+
+

@@ -1,0 +1,7 @@
+- cache(text_card) do
+  = element_view_for(text_card) do |el|
+    .carousel-item.active
+      .container.__text_card
+        .carousel-caption.text-start
+          h1 = el.render(:title)
+          p = el.render(:body)

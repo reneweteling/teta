@@ -1,0 +1,12 @@
+require: ["rubocop-rails"]
+
+AllCops:
+  TargetRubyVersion: 3.2
+  NewCops: enable
+  Exclude:
+    - bin/*
+    - Gemfile
+    - Rakefile
+    - config/*.rb
+    - db/**/*.rb
+    - vendor/bundle/**/*

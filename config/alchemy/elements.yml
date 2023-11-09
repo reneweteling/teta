@@ -1,0 +1,65 @@
+# == In this configuration, you set up Alchemy's element layouts.
+#
+# For further information please see http://guides.alchemy-cms.com/stable/elements.html
+
+- name: hero
+  unique: true
+  ingredients:
+    - role: title
+      type: Text
+      default: "Hero"
+    - role: subtitle
+      type: Text
+      default: "Subtitle"
+    - role: bg_image
+      type: Picture
+
+- name: text_content
+  ingredients:
+    - role: title
+      type: Text
+      default: "Title"
+    - role: body
+      type: Richtext
+      default: "Body"
+
+- name: usp_layout
+  ingredients:
+    - role: title
+      type: Text
+      default: "Title"
+    - role: subtitle
+      type: Text
+      default: "Subtitle"
+  nestable_elements:
+    - img_card
+
+- name: img_card
+  ingredients:
+    - role: title
+      type: Text
+      default: "Title"
+    - role: bg_image
+      type: Picture
+
+- name: text_card
+  ingredients:
+    - role: title
+      type: Text
+      default: "Title"
+    - role: body
+      type: Text
+      default: "Body"
+
+- name: carousel
+  nestable_elements:
+    - text_card
+
+- name: contact
+  ingredients:
+    - role: title
+      type: Text
+      default: "Title"
+    - role: subtitle
+      type: Text
+      default: "Subtitle"

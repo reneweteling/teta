@@ -1,0 +1,9 @@
+- cache(hero) do
+  = element_view_for(hero) do |el|
+    .px-4.py-5.text-center.border.__hero
+      img.d-block.mx-auto.mb-4 src=el.render(:bg_image) alt="" width="72" height="57"
+      h1.display-5.fw-bold = el.render(:title)
+      .col-lg-6.mx-auto
+        p.lead.mb-4 = el.render(:subtitle)
+    / .bg_image
+    /   = el.render(:bg_image)

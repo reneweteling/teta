@@ -1,0 +1,6 @@
+- cache(img_card) do
+  = element_view_for(img_card) do |el|
+    .title
+      = el.render(:title)
+    .bg_image
+      = el.render(:bg_image)

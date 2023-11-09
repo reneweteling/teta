@@ -1,0 +1,12 @@
+{
+  "rubyLsp.formatter": "rubocop",
+  "rubyLsp.rubyVersionManager": "asdf",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "git.ignoreLimitWarning": true,
+  "ruby.rubocop.onSave": true,
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  }
+}

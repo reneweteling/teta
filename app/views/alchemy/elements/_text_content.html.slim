@@ -1,0 +1,7 @@
+- cache(text_content) do
+  = element_view_for(text_content) do |el|
+    .container.border.__text_content
+      .row
+        .col
+          h2 = el.render(:title)
+          = el.render(:body)

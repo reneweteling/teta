@@ -1,0 +1,7 @@
+- cache(contact) do
+  = element_view_for(contact) do |el|
+    .container.__contact
+      .title
+        = el.render(:title)
+      .subtitle
+        = el.render(:subtitle)

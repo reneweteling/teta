@@ -1,0 +1,10 @@
+# == This file defines the page layouts for new pages.
+#
+# For further information please see http://guides.alchemy-cms.com/stable/page_layouts.html
+
+- name: energetisch
+  controller: energetisch
+  action: index
+  unique: true
+  elements: [hero, text_content, usp_layout, carousel, contact]
+  autogenerate: [hero, text_content, usp_layout, carousel, contact]

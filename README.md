@@ -1,24 +1,45 @@
-# README
+# Thecladekker.nl Energetischreinigen.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
 
-Things you may want to cover:
+```bash
+# 1 - get the latest prod data
+ssh weteling.com dokku postgres:export teta | > volumes/db-data/live.pgdump
 
-* Ruby version
+# 2 - start the app
+docker compose up
+```
 
-* System dependencies
+## Debugging tools
 
-* Configuration
+```bash
+# have docker compose up running
+docker compose up -d
+docker compose exec web bash
+-->
+bin/rails s
 
-* Database creation
+docker ps
+docker stats
+docker attach <img id>
+```
 
-* Database initialization
+bin/rails g alchemy:elements --skip -e slim
 
-* How to run the test suite
+# Dokku setup
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+    dokku storage:mount teta /home/dokku/teta/static/assets:/app/public/assets
+    dokku storage:mount teta /home/dokku/teta/static/packs:/app/public/packs
+```
 
-* Deployment instructions
+## /home/dokku/teta/nginx.conf.d/static.conf
 
-* ...
+```nginx
+location ~ ^/assets|packs/ {
+    root /home/dokku/teta/static;
+    gzip_static on;
+    expires max;
+    add_header Cache-Control public;
+}
+```
