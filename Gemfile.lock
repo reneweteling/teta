@@ -327,6 +327,11 @@ GEM
     seed_dump (3.3.1)
       activerecord (>= 4)
       activesupport (>= 4)
+    sentry-rails (5.13.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.13.0)
+    sentry-ruby (5.13.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     simple_form (5.3.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -386,6 +391,8 @@ DEPENDENCIES
   rubocop-rails
   ruby-lsp
   seed_dump
+  sentry-rails
+  sentry-ruby
   slim
   spring
   sprockets-rails

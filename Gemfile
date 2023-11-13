@@ -13,6 +13,8 @@ gem 'bootstrap', '~> 5'
 gem 'puma'
 gem 'rails'
 gem 'slim'
+gem "sentry-ruby"
+gem "sentry-rails"
 gem 'seed_dump'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
