@@ -11,15 +11,18 @@ module Teta
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.hosts << "www.energetischreinigen.local.gd:3000"
-    config.hosts << "energetischreinigen.local.gd:3000"
-    config.hosts << "www.energetischreinigen.com"
-    config.hosts << "energetischreinigen.com"
+    # config.hosts << "www.energetischreinigen.local.gd:3000"
+    # config.hosts << "energetischreinigen.local.gd:3000"
+    # config.hosts << "www.energetischreinigen.com"
+    # config.hosts << "energetischreinigen.com"
 
-    config.hosts << "www.thecladekker.local.gd:3000"
-    config.hosts << "thecladekker.local.gd:3000"
-    config.hosts << "www.thecladekker.nl"
-    config.hosts << "thecladekker.nl"
+    # config.hosts << "www.thecladekker.local.gd:3000"
+    # config.hosts << "thecladekker.local.gd:3000"
+    # config.hosts << "www.thecladekker.nl"
+    # config.hosts << "thecladekker.nl"
+    #
+    # allow all hosts
+    config.hosts.clear
 
     # Configuration for the application, engines, and railties goes here.
     #
