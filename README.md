@@ -33,12 +33,16 @@ bin/rails g alchemy:elements --skip -e slim
 # echo "export DOCKER_BUILD_KIT=1" | sudo tee -a /etc/default/dokku
 # echo "export DOCKER_CLI_EXPERIMENTAL=enabled" | sudo tee -a /etc/default/dokku
 
+# git upstream
+git remote add dokku dokku@weteling.com:teta
+
 # project setup
 dokku apps:create teta
 dokku postgres:create teta-db
 dokku postgres:link teta-db teta
 dokku config:set teta RAILS_ENV=production
 dokku config:set teta RAILS_LOG_TO_STDOUT=true
+dokku config:set teta PORT=5000
 dokku config:set teta RAILS_SERVE_STATIC_FILES=true
 dokku domains:add teta thecladekker.nl
 dokku domains:add teta energetischreinigen.nl
