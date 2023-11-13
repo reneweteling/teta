@@ -1,7 +1,7 @@
 # Dockerfile
 FROM ruby:3.2-alpine as app
 
-WORKDIR /var/www/html
+WORKDIR /app
 # Bundle in seperate layer
 RUN bundle config build.nokogiri --use-system-libraries
 
