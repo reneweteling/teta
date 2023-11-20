@@ -7,6 +7,7 @@ RUN bundle config build.nokogiri --use-system-libraries
 
 RUN apk add --update --no-cache \
     bash \
+    git \
     build-base \
     gcompat \
     imagemagick \
