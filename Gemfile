@@ -15,6 +15,7 @@ gem 'rails'
 gem 'slim'
 gem "sentry-ruby"
 gem "sentry-rails"
+gem "aws-sdk-s3", require: false
 gem 'seed_dump'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
