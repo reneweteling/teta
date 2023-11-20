@@ -24,8 +24,6 @@ aws_config = {
   url_host: 's3.eu-west-1.amazonaws.com/teta.weteling.com'
 }
 
-pp aws_config
-
 Dragonfly.app(:alchemy_pictures).configure do
   dragonfly_url nil
   plugin :imagemagick
