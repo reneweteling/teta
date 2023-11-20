@@ -13,17 +13,27 @@
 #
 # Pictures
 #
+require 'dragonfly/s3_data_store'
+
+aws_config = {
+  bucket_name: 'teta.weteling.com',
+  access_key_id: Rails.application.credentials.dig(:aws, :access_key_id),
+  secret_access_key: Rails.application.credentials.dig(:aws, :secret_access_key),
+  region: 'eu-west-1',
+  root_path: 'alchemy/pictures',
+  url_host: 's3.eu-west-1.amazonaws.com/teta.weteling.com'
+}
+
+pp aws_config
+
 Dragonfly.app(:alchemy_pictures).configure do
   dragonfly_url nil
   plugin :imagemagick
   plugin :svg
-  secret '8dd7f188700198aeed7deab258fa4af74d48cf03f1318bbf11705e0a7c796dfc'
+  secret Rails.application.credentials.secret_key_base
   url_format '/pictures/:job/:basename.:ext'
 
-  datastore :file,
-            root_path: Rails.root.join('uploads/pictures').to_s,
-            server_root: Rails.public_path,
-            store_meta: false
+  datastore :s3, aws_config
 end
 
 # Mount as middleware
@@ -31,7 +41,5 @@ Rails.application.middleware.use Dragonfly::Middleware, :alchemy_pictures
 
 # Attachments
 Dragonfly.app(:alchemy_attachments).configure do
-  datastore :file,
-            root_path: Rails.root.join('uploads/attachments').to_s,
-            store_meta: false
+  datastore :s3, aws_config
 end
