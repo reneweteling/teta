@@ -4,7 +4,7 @@
 
 ```bash
 # 1 - get the latest prod data
-ssh weteling.com dokku postgres:export teta | > volumes/db-data/live.pgdump
+ssh weteling.com dokku postgres:export teta-db | > volumes/db-data/live.pgdump
 
 # 2 - start the app
 docker compose up

@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: teta_development
+  database: teta_dev
 
 test:
   <<: *default

@@ -48,7 +48,7 @@
       type: Text
       default: "Title"
     - role: body
-      type: Text
+      type: Richtext
       default: "Body"
 
 - name: carousel
