@@ -130,11 +130,11 @@ mailer:
   page_layout_name: contact
   forward_to_page: false
   mail_success_page: thanks
-  mail_from: your.mail@your-domain.com
-  mail_to: your.mail@your-domain.com
-  subject: A new contact form message
-  fields: [salutation, firstname, lastname, address, zip, city, phone, email, message]
-  validate_fields: [lastname, email]
+  mail_from: thecladekker@gmail.com
+  mail_to: thecladekker@gmail.com
+  subject: Een bericht van je site
+  fields: [firstname, email, message]
+  validate_fields: [firstname, email, message]
 
 # === User roles
 #
@@ -166,14 +166,14 @@ uploader:
   file_size_limit: 100
   allowed_filetypes:
     alchemy/attachments:
-    - '*'
+      - "*"
     alchemy/pictures:
-    - jpg
-    - jpeg
-    - gif
-    - png
-    - svg
-    - webp
+      - jpg
+      - jpeg
+      - gif
+      - png
+      - svg
+      - webp
 
 # === Link Target Options
 #

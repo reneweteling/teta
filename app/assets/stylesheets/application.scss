@@ -19,19 +19,27 @@ $bg-color: #faece1;
 $dark-red: rgb(29, 14, 3);
 
 main {
+  .bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   background-color: $bg-color;
   .__hero {
-    .bg-image {
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
     .item {
       background-color: $bg-color;
       opacity: 0.7;
     }
   }
   .__carousel {
+    background-color: $dark-red;
+    color: $bg-color;
+  }
+  .__usp {
+    .bg-image {
+      filter: sepia(1) saturate(0.8);
+    }
+  }
+  .__contact {
     background-color: $dark-red;
     color: $bg-color;
   }

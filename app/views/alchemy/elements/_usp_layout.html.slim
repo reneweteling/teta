@@ -1,8 +1,11 @@
 - cache(usp_layout) do
   = element_view_for(usp_layout) do |el|
-    .container.text-center
-      h2 = el.render(:title)
-      p.my-5 = el.render(:subtitle)
-      .row
-        - usp_layout.nested_elements.published.each do |nested_element|
-          .col-4.my-4 = render_element nested_element
+    .__usp.position-relative
+      .bg-image.position-absolute.top-0.start-0.w-100.h-100 style="background-image: url('#{el.element.value_for(:bg_image).url}');"
+      .position-relative
+        .container.text-center
+          h2 = el.render(:title)
+          p.my-5 = el.render(:subtitle)
+          .row
+            - usp_layout.nested_elements.published.each do |nested_element|
+              .col-4.my-4 = render_element nested_element

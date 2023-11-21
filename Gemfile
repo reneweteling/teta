@@ -18,6 +18,7 @@ gem "sentry-rails"
 gem "aws-sdk-s3", require: false
 gem 'alchemy-dragonfly-s3', github: 'AlchemyCMS/alchemy-dragonfly-s3'
 gem 'seed_dump'
+gem 'simple_form'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'

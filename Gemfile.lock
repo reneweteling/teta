@@ -446,6 +446,7 @@ DEPENDENCIES
   seed_dump
   sentry-rails
   sentry-ruby
+  simple_form
   slim
   spring
   sprockets-rails

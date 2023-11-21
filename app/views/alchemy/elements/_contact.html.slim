@@ -1,7 +1,14 @@
-- cache(contact) do
-  = element_view_for(contact) do |el|
-    .container.__contact
-      .title
-        = el.render(:title)
-      .subtitle
-        = el.render(:subtitle)
+= element_view_for(contact) do |el|
+  .__contact.py-5
+    .row
+      .col-6.mx-auto
+        .text-center
+          h2 = el.render(:title)
+          p = el.render(:subtitle)
+
+        = simple_form_for(@message ||= Alchemy::Message.new) do |form|
+          = form.input :firstname
+          = form.input :email
+          = form.input :message, as: 'text'
+          = form.hidden_field :contact_form_id, value: element.id
+          = form.button :submit
