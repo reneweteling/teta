@@ -6,8 +6,9 @@ html[lang=@page.language_code]
     =csp_meta_tag
 
     =stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload'
-    =javascript_include_tag 'application', 'data-turbo-track': 'reload'
+    =javascript_importmap_tags 'application'
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial"
   body
-    main.clontainer
+    main
       = render_elements
     = render "alchemy/edit_mode"

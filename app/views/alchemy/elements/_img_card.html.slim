@@ -1,6 +1,5 @@
 - cache(img_card) do
   = element_view_for(img_card) do |el|
-    .title
+    img.rounded-circle.rounded src=el.element.value_for(:bg_image).url
+    .title.my-4
       = el.render(:title)
-    .bg_image
-      = el.render(:bg_image)

@@ -14,3 +14,25 @@
  *= require_tree ./alchemy/elements
  */
 @import "bootstrap-custom";
+
+$bg-color: #faece1;
+$dark-red: rgb(29, 14, 3);
+
+main {
+  background-color: $bg-color;
+  .__hero {
+    .bg-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .item {
+      background-color: $bg-color;
+      opacity: 0.7;
+    }
+  }
+  .__carousel {
+    background-color: $dark-red;
+    color: $bg-color;
+  }
+}

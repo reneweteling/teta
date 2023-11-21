@@ -31,6 +31,8 @@
     - role: subtitle
       type: Text
       default: "Subtitle"
+    - role: bg_image
+      type: Picture
   nestable_elements:
     - img_card
 
