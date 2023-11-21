@@ -27,7 +27,7 @@ ENV RAILS_ENV=$RAILS_ENV
 ENV NODE_ENV=production
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle install --jobs=4 --retry=3
+RUN bundle install --jobs=4 --retry=3 --without development test
 
 # Install node packages
 # COPY package.json yarn.lock ./
