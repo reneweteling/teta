@@ -62,9 +62,9 @@
     - role: title
       type: Text
       default: "Title"
-    - role: subtitle
-      type: Text
-      default: "Subtitle"
+    - role: body
+      type: Richtext
+      default: "Body"
     - role: mail_from
       type: Text
       validate:

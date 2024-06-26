@@ -4,7 +4,7 @@
       .col-6.mx-auto
         .text-center
           h2 = el.render(:title)
-          p = el.render(:subtitle)
+          == el.render(:body)
 
         / = simple_form_for(@message ||= Alchemy::Message.new) do |form|
         /   = form.input :firstname
