@@ -1,11 +1,13 @@
 - cache(hero) do
   = element_view_for(hero) do |el|
-    / .px-4.py-5.text-center.border.__hero
     .__hero
-      .bg-image style="background-image: url('#{hero.value_for(:bg_image).url}'); "
-        .py-5
-          .item.col-md-5.text-center.mx-auto.p-lg-5.border.border-2.border-dark.rounded
-            h1.display-5.fw-bold = el.render(:title)
-            p = el.render(:subtitle)
+      .p-5
+        .bg-image style="background-image: url('#{hero.value_for(:bg_image).url}');"
+        .py-5.position-relative
+          .item.col-md-5.mx-auto.p-lg-5
+            h1.mb-5 = el.render(:title)
+            p.mt-5 = el.render(:subtitle)
+
+
 
 

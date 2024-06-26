@@ -1,7 +1,6 @@
 - cache(usp_layout) do
   = element_view_for(usp_layout) do |el|
     .__usp.position-relative
-      .bg-image.position-absolute.top-0.start-0.w-100.h-100 style="background-image: url('#{el.element.value_for(:bg_image).url}');"
       .position-relative
         .container.text-center
           h2 = el.render(:title)

@@ -127,7 +127,7 @@ default_language:
 #           firstname: Vorname
 #
 mailer:
-  page_layout_name: contact
+  page_layout_name: energetisch
   forward_to_page: false
   mail_success_page: thanks
   mail_from: thecladekker@gmail.com
